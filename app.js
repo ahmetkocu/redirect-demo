@@ -14,7 +14,8 @@ app.post("/carpal", (req, res) => {
   const password = req.body.password;
   console.log("Username: " + username);
   console.log("Password: " + password);
-  res.send("Data received, " + "Username: " + username);
+  
+  res.send(JSON.stringify(req.body));
 });
  
 app.listen(3000);
